@@ -10,9 +10,12 @@ const publicPath = path.join(process.cwd(), 'frontend', 'dist');
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
+//send api calls to router
 app.use('/api/employees', require('./routes/employeeRoutes'));
 app.use(express.static(publicPath))
 
+
+//send the main page on url load
 app.get('/', (req, res) => {
   res.sendFile(path.join(publicPath, 'index.html'));
 });

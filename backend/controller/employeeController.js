@@ -8,7 +8,6 @@ const getEmployees = asyncHandler(async (req, res) => {
     Employee.find().sort({ officeNumber: -1, gitHub: -1 }).then((data) => {
         res.status(200).json(data)
     })
-
 })
 
 //add new employee to db

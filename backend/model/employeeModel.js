@@ -1,5 +1,8 @@
 const mongoose = require('mongoose')
 
+
+//mongoose schema
+//the is the schema for mongoDB
 const EmployeeSchema = new mongoose.Schema({
     name: String,
     id: Number,
