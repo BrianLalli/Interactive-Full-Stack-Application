@@ -11,7 +11,8 @@ const publicPath = path.join(process.cwd(), 'frontend', 'dist');
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 //send api calls to router
-app.use('/api/employees', require('./routes/employeeRoutes'));
+
+app.use('/api/Projects', require('./routes/projectRoutes'));
 app.use(express.static(publicPath))
 
 
@@ -27,5 +28,6 @@ connectDB.once('open', () => {
   })
 })
 
-
+// To Do:
+// Add app.use(USERS)
 
