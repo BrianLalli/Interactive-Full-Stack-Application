@@ -9,6 +9,7 @@ const ProjectSchema = new mongoose.Schema({
     deadline: String,
     budget: String,
     status: String,
+
 },
 user_id,{
     type: DataTypes.INTEGER,
@@ -20,6 +21,7 @@ user_id,{
 
 }
 )
+
 
 module.exports = mongoose.model('Project', ProjectSchema)
 
