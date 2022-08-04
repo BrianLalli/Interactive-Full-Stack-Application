@@ -9,7 +9,17 @@ const ProjectSchema = new mongoose.Schema({
     deadline: String,
     budget: String,
     status: String,
-})
+},
+user_id,{
+    type: DataTypes.INTEGER,
+    reefernces: {
+        model: 'userModel',
+        key: 'id',
+        unique: false
+    }
+
+}
+)
 
 module.exports = mongoose.model('Project', ProjectSchema)
 
