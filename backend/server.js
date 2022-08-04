@@ -5,8 +5,38 @@ const colors = require('colors')
 const app = express();
 const connectDB = require('./config/db')
 const path = require('path')
-
 const publicPath = path.join(process.cwd(), 'frontend', 'dist');
+const session = MyModel.startSession();
+const doc = await MyModel.findOne().session(session);
+doc.$session() === session; // true
+doc.$session(null);
+doc.$session() === null; // true
+
+// Set up sessions with cookies using SQL
+// const sess = {
+//   secret: 'Super secret secret',
+//   cookie: {
+//     // Stored in milliseconds (86400 === 1 day)
+//     maxAge: 86400,
+//   },
+//   resave: false,
+//   saveUninitialized: true,
+//   store: new SequelizeStore({
+//     db: sequelize,
+//   }),
+// };
+
+// app.use(session(sess));
+
+// Set up sessions with cookies using Mongo
+// db = db.getMongo().startSession({retryWrites: true, causalConsistency: true}).getDatabase(db.getName());
+
+// db.runCommand(
+//   {
+//     startSession: 1
+//   }
+// )
+
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))

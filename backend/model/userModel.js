@@ -29,7 +29,7 @@ Users.init({
     },
     project_id:{
         type: DataTypes.INTEGER,
-        refrences:{
+        references:{
             model: 'projectModel',
             key: 'id',
             unique: false
