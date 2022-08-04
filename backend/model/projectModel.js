@@ -12,7 +12,7 @@ const ProjectSchema = new mongoose.Schema({
 },
 user_id,{
     type: DataTypes.INTEGER,
-    reefernces: {
+    references: {
         model: 'userModel',
         key: 'id',
         unique: false
