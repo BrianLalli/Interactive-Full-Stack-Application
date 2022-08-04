@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import ErrorPage from "../Pages/404/Error";
+import LandingPage from "../Pages/Landing/LandingPage";
 
 function App() {
   const [count, setCount] = useState(0);

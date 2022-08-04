@@ -4,12 +4,23 @@
 //  FAQ ?? maybe
 
 // import Navbar from "../../components/navbar/navbar"
+import "../../index.css";
 import React from "react";
 
 export default class LandingPage extends React.Component {
-    constructor(props){
-        super(props)
-    }
+  constructor(props) {
+    super(props);
+  }
 
-
+  render() {
+    return (
+      <>
+        <div className="ae-hero h-80 w-12/12 bg-gradient-to-r from-cyan-500 to-blue-500 cent">
+          <section>
+            <img src="../../assets/img/pexels-canva-studio-3153201"></img>
+          </section>
+        </div>
+      </>
+    );
+  }
 }
