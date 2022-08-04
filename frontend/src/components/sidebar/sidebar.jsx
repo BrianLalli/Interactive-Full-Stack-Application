@@ -1,41 +1,36 @@
 import "react-pro-sidebar/dist/css/styles.css";
-import { ProSidebar, Menu, MenuItem, SubMenu, image } from "react-pro-sidebar";
-import { GiBattleAxe, GiTechnoHeart } from "react-icons/gi";
+import "./sidebar.css";
+import { ProSidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Sidebar = () => {
-  const [Projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState([]);
 
-  // useEffect(() => {
-  //   axios.get("/api/projects").then((response) => {
-  //     setProjects(response.data);
-  //   });
-  // });
-
-  function renderMenuItems() {
-    Projects.map((Project) => {
-      return (
-        <MenuItem>
-          ${Project.name}
-          <Link to="${Project.name}" />
-        </MenuItem>
-      );
+  useEffect(() => {
+    //****** remove http://localhost:5000 BEFORE PRODUCTION *******
+    axios.get("http://localhost:5000/api/projects").then((response) => {
+      setProjects(response.data);
+      console.info(response.data);
     });
+  }, []);
+
+  function renderMenuItems(projects) {
+    return <MenuItem key={projects._id}>{projects.name}</MenuItem>;
   }
 
   return (
-    <aside className="h-full">
-      <ProSidebar collapsed="true">
+    <aside className="ae-side h-full">
+      <ProSidebar collapsed="">
         <Menu iconShape="square">
-          <MenuItem icon={GiBattleAxe}>Dashboard</MenuItem>
-          <SubMenu title="Projects" icon={GiTechnoHeart}>
-            {/* {renderMenuItems} */}
+          <MenuItem>Dashboard</MenuItem>
+          <SubMenu title="Projects">
+            {projects.map((projects) => {
+              return renderMenuItems(projects);
+            })}
           </SubMenu>
         </Menu>
-        <image>
-          
-        </image>
       </ProSidebar>
     </aside>
   );

@@ -7,7 +7,7 @@ const ProjectSchema = new mongoose.Schema({
     name: String,
     id: Number,
     deadline: String,
-    budget: Number,
+    budget: String,
     status: String,
 })
 
