@@ -1,3 +1,4 @@
+@import "./variables.scss";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -71,3 +72,14 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@import "variables.scss";
+
+.ae-side {
+  height: 1300px;
+}
+
+// Your variable overrides
+$sidebar-bg-color: #000000;
+
+@import "../../../node_modules/react-pro-sidebar/dist/scss/styles.scss";

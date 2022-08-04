@@ -1,0 +1,10 @@
+@import "variables.scss";
+
+.ae-side {
+  height: 1300px;
+}
+
+// Your variable overrides
+$sidebar-bg-color: #000000;
+
+@import "../../../node_modules/react-pro-sidebar/dist/scss/styles.scss";
