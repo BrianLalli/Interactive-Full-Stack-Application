@@ -10,9 +10,9 @@ const UserSchema = new mongoose.Schema({
     id: Number,
     role: String,
     email: String,
-    roject:[{ ProjectId: Integer
+    project:[{ ProjectId: Integer
     }],
-},)
+});
 
 //mongoose schema
 //the is the schema for mongoDB
