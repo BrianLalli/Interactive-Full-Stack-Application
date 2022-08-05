@@ -30,7 +30,7 @@ app.use(express.urlencoded({ extended: false }))
 //send api calls to router
 
 app.use('/api/Projects', require('./routes/projectRoutes'));
-app.use('api/Users', require('./routes/userRoutes'));
+// app.use('api/Users', require('./routes/userRoutes'));
 app.use(express.static(publicPath))
 
 
