@@ -143,7 +143,7 @@ export default function Footer() {
         © 2022 Made with <span className="text-red-500">❤</span> by:
         <a className="text-whitehite" href="https://github.com/andrew87e">
           {" "}
-          Andrew Edwards
+          Quar+z
         </a>
       </div>
     </footer>
