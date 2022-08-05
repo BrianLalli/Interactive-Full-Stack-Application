@@ -3,9 +3,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import ErrorPage from "../Pages/404/Error";
 import LandingPage from "../Pages/Landing/LandingPage";
+import AboutPage from "../Pages/About/About";
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <BrowserRouter>
@@ -15,7 +15,7 @@ function App() {
         <Route path="Team" element={<TeamPage />} />
         <Route path="Tasks" element={<Tasks />} />
         <Route path="User" element={<UserPage />} /> */}
-        {/* <Route path="About" element={<AboutPage />} /> */}
+        <Route path="About" element={<AboutPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>

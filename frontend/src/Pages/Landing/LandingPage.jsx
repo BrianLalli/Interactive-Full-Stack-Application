@@ -8,6 +8,7 @@ import "./Landing.css";
 import React from "react";
 import hero1 from "../../assets/img/pexels-canva-studio-3153201.jpg";
 import CardHero from "../../components/CardHero/CardHero";
+import { Link } from "react-router-dom";
 
 export default class LandingPage extends React.Component {
   constructor(props) {
@@ -35,6 +36,9 @@ export default class LandingPage extends React.Component {
               cillum qui labore nisi.
             </p>
           </article>
+            <button>
+              <Link to="/About">test</Link>
+            </button>
         </div>
         {/* 2nd content div  */}
         <div className="ae-hero relative h-96 w-12/12 bg-gradient-to-r from-sky-300 to-violet-800 flex-wrap p-1 mr-6 ml-16 mt-16 overflow-hidden">

@@ -10,15 +10,6 @@ const ProjectSchema = new mongoose.Schema({
     budget: String,
     status: String,
 
-},
-user_id,{
-    type: DataTypes.INTEGER,
-    references: {
-        model: 'userModel',
-        key: 'id',
-        unique: false
-    }
-
 }
 )
 
