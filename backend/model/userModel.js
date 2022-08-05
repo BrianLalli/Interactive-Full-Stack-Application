@@ -10,6 +10,8 @@ const UserSchema = new mongoose.Schema({
     id: Number,
     role: String,
     email: String,
+    roject:[{ ProjectId: Integer
+    }],
 },)
 
 //mongoose schema

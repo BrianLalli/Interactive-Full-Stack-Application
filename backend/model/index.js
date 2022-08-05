@@ -6,5 +6,12 @@
 //    });
 
 // Project.hasMany(Users,{
-//     foreignKey: 'user_id',
+//     foreignKey:'user_id',
 // });
+Users.hasMany(Project, {
+    foreignKey: 'project_id',
+});
+
+Project.hasMany(Users, {
+    foreignKey: 'user_id',
+});
