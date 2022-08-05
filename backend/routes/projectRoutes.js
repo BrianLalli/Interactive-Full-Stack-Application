@@ -9,6 +9,6 @@ router.route('/').get(getProjects).post(setProject)
 //send delete and put requests to the /:ID specific controller
 router.route('/:id').delete(deleteProject).put(updateProject)
 
-router.use(cors());
+router.use(cors()); 
 
 module.exports = router;
