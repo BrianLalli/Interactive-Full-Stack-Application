@@ -5,10 +5,20 @@ import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import Sidebar from "./components/sidebar/sidebar";
 
+export default class Dashboard extends React.Component {
+  constructor(props) {
+    super(props)
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <Sidebar />
-    <Footer />
-  </React.StrictMode>
-);
+    state = {
+      
+    }
+  }
+
+
+  render() {
+    <>
+      <Sidebar />
+      <Footer />
+    </>;
+  }
+}
